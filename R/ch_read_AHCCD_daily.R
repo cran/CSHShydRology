@@ -7,7 +7,7 @@
 #' @return If successful, returns the values in a data frame, consisting of the date, 
 #' the value and the data code.
 #' @author Kevin Shook
-#' @seealso  \code{\link{ch_read_AHCCD_monthly}} \code{\link{ch_get_AHCCD_monthly}}
+#' @seealso  \code{\link{ch_read_AHCCD_monthly}} 
 #' @references Daily AHCCD data are available from \url{http://crd-data-donnees-rdc.ec.gc.ca/CDAS/products/EC_data/AHCCD_daily/}. 
 #' Any use of the data must cite 
 #'\cite{Mekis, E and L.A. Vincent, 2011: An overview of the second generation 
@@ -15,9 +15,11 @@
 #'Atmosphere-Ocean, 49 (2), 163-177.}
 #' 
 #' @examples
-#' \donttest{
-#' # Not tested automatically as requires a file
-#'stoon_daily_tmax <- ch_read_AHCCD_daily("dx40657120.txt")}
+#' \dontrun{
+#' # Don't run this example as it requires a file, and use of the dummy
+#' # file will cause an error message
+#' 
+#' stoon_daily_tmax <- ch_read_AHCCD_daily("dx40657120.txt")}
 #' @importFrom stringr str_split_fixed str_detect fixed
 #' @importFrom utils read.fwf
 #' @export

@@ -10,7 +10,11 @@
 #' @keywords internal
 #' @author Kevin Shook
 #'
-#' @examples \donttest{df <- ch_stack_EC(data_values, data_codes)}
+#' @examples \dontrun{
+#' # Do not run as the function requires a data frame of EC data and
+#' # the dummy variable will cause an error message
+#' df <- ch_stack_EC(data_values, data_codes)
+#' }
 #' 
 ch_stack_EC <- function(data_values = NULL, data_codes = NULL) {
   #check parameters
@@ -61,7 +65,7 @@ ch_date_subset <- function(df, prd) {
   return(df)
 }
 
-#' @title Adjusts colour codes to introduce transparency
+#' Adjusts colour codes to introduce transparency
 #'
 #' \code{ch_col_transparent} is used to adjust colour codes to introduce transparency.
 #'
@@ -107,3 +111,65 @@ ch_col_transparent <- function(colour, trans)
   res <- paste("#",apply(apply(rgb,2,num2hex),2,paste,collapse = ""),sep = "")
   return(res)
 }
+
+#' Tests url to see if it will work
+#'
+#' @param url Required. URL to be checked
+#' @param quiet Optional. If \code{FALSE} (the default) messages are printed.
+#'
+#' @return Returns \option{error} if there was an error, \option{warning} if there was a
+#' warning. Otherwise, returns \option{OK}. Strings are returned instead of logical values
+#' to simplify checking result in calling function.
+#' @seealso See original code on post in Stack Overflow
+#' \href{https://stackoverflow.com/questions/12193779/how-to-write-trycatch-in-r}{
+#' How to write trycatch in R}
+#' @export
+#' @keywords internal
+#' @author Kevin Shook
+#'
+#' @examples \donttest{
+#' # Not tested automatically as can be very slow
+#' test_url <- "https://zenodo.org/record/4781469/files/sm_data.csv"
+#' ch_test_url_file(test_url, quiet = TRUE)
+#' }
+#' 
+ch_test_url_file <- function(url, quiet = FALSE){
+    out <- tryCatch(
+      {
+        readLines(con = url, n = 1, warn = FALSE) 
+      },
+      error = function(cond) {
+        if (!quiet) {
+          message(paste("URL does not seem to exist:", url))
+          message("Here's the original error message:")
+          message(cond)
+        } else{
+        }
+
+        # Choose a return value in case of error
+        return("error")
+      },
+      warning = function(cond) {
+        if (!quiet) {
+          message(paste("URL caused a warning:", url))
+          message("Here's the original warning message:")
+          message(cond)
+          # Choose a return value in case of warning
+        } else{
+        }
+
+        return("warning")
+      },
+      finally = {
+        if (!quiet) {
+          message(paste("Processed URL:", url))
+        } else {
+        }
+
+      }
+    ) 
+    if (out != "error" & out != "warning")
+      out <- "OK"
+    
+    return(out)
+  }

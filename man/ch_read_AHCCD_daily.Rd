@@ -19,8 +19,10 @@ precipitation or temperatures. The values are arranged as
 month x day, which makes them difficult to read using standard \R functions.
 }
 \examples{
-\donttest{
-# Not tested automatically as requires a file
+\dontrun{
+# Don't run this example as it requires a file, and use of the dummy
+# file will cause an error message
+
 stoon_daily_tmax <- ch_read_AHCCD_daily("dx40657120.txt")}
 }
 \references{
@@ -31,7 +33,7 @@ adjusted daily precipitation dataset for trend analysis in Canada.
 Atmosphere-Ocean, 49 (2), 163-177.}
 }
 \seealso{
-\code{\link{ch_read_AHCCD_monthly}} \code{\link{ch_get_AHCCD_monthly}}
+\code{\link{ch_read_AHCCD_monthly}}
 }
 \author{
 Kevin Shook

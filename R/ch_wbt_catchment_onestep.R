@@ -27,22 +27,26 @@
 #' @importFrom raster raster
 #' @importFrom whitebox wbt_extract_streams wbt_raster_streams_to_vector wbt_snap_pour_points wbt_watershed wbt_raster_to_vector_polygons
 #' @importFrom sf st_crs write_sf st_write
+#' @importFrom magrittr %>%
 #' @return Returns an \pkg{sp} object of the delineated catchment.
 #' @export
 #'
 #' @examples
-#' \donttest{
-#' # Not tested automatically as requires installation of Whitebox
-#' library(raster)
-#' test_raster <- ch_volcano_raster()
-#' dem_raster_file <- tempfile(fileext = c(".tif"))
-#' # write test raster to file
-#' writeRaster(test_raster, dem_raster_file, format = "GTiff")
-#' wd <- tempdir()
-#' pourpoint_file <- tempfile("volcano_pourpoints", fileext = ".shp")
-#' pourpoints <- ch_volcano_pourpoints(pourpoint_file)
-#' catchment <- ch_wbt_catchment_onestep(wd = wd, in_dem = dem_raster_file, 
-#' pp_sf = pourpoints, sink_method = "fill", threshold = 1, snap_dist = 10)
+#' # Only proceed if Whitebox executable is installed
+#' library(whitebox)
+#' if (check_whitebox_binary()){
+#'   library(raster)
+#'   test_raster <- ch_volcano_raster()
+#'   dem_raster_file <- tempfile(fileext = c(".tif"))
+#'   # write test raster to file
+#'   writeRaster(test_raster, dem_raster_file, format = "GTiff")
+#'   wd <- tempdir()
+#'   pourpoint_file <- tempfile("volcano_pourpoints", fileext = ".shp")
+#'   pourpoints <- ch_volcano_pourpoints(pourpoint_file)
+#'   catchment <- ch_wbt_catchment_onestep(wd = wd, in_dem = dem_raster_file, 
+#'   pp_sf = pourpoints, sink_method = "fill", threshold = 1, snap_dist = 10)
+#' } else {
+#'   message("Examples not run as Whitebox executable not found")
 #' }
 ch_wbt_catchment_onestep <- function(wd, in_dem, pp_sf, 
                                      sink_method = "breach_leastcost", dist = NULL, 

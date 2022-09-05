@@ -4,12 +4,14 @@
 \alias{ch_get_url_data}
 \title{Gets remote data sets}
 \usage{
-ch_get_url_data(gd_url, gd_filename)
+ch_get_url_data(gd_url, gd_filename, quiet = FALSE)
 }
 \arguments{
 \item{gd_url}{url for accessing data set}
 
 \item{gd_filename}{name of file on local drive, including full path}
+
+\item{quiet}{Optional. If \code{FALSE} (the default) error/warning messages are printed if the data cannot be found.}
 }
 \value{
 Returns a data frame (from a .csv file), a \code{raster} object (from a .tif file), 
@@ -21,34 +23,33 @@ saves them locally, then accesses them locally after the first time the script i
 }
 \examples{
 \donttest{
-# example not tested automatically as multiple large data files are downloaded
+# Example not tested automatically as multiple large data files are downloaded which is slow
 
 # Tested using files in the Upper Penticton Creek
 # zenodo repository https://zenodo.org/record/4781469
 library(ggplot2)
-library(here)
 library(raster)
 
 # create directory to store data sets
-dir_name <- here("test_data")
+dir_name <- tempdir(check = FALSE)
 if (!dir.exists(dir_name)) {
   dir.create(dir_name)
 }
  
 # test with soil moisture data in csv format
-sm_fn <- here("test_data", "sm_data.csv")
+sm_fn <- file.path(dir_name, "sm_data.csv")
 sm_url <- "https://zenodo.org/record/4781469/files/sm_data.csv"
 sm_data <- ch_get_url_data(sm_url, sm_fn)
 head(sm_data)
 
 # test with tif/tiff file containing a dem
-ra_fn <- here("test_data", "gs_dem25.tif")
+ra_fn <- file.path(dir_name, "gs_dem25.tif")
 ra_url <- "https://zenodo.org/record/4781469/files/gs_dem25.tif"
 ra_data <- ch_get_url_data(ra_url, ra_fn)
 plot(ra_data)
 
 # test with GeoJSON
-gs_fn <- here("test_data", "gs_soilmaps.GeoJSON")
+gs_fn <- file.path(dir_name, "gs_soilmaps.GeoJSON")
 gs_url <- "https://zenodo.org/record/4781469/files/gs_soilmaps.GeoJSON"
 gs_data <- ch_get_url_data(gs_url, gs_fn)
 

@@ -19,8 +19,10 @@ precipitation or temperatures. The values are arranged as year x month,
 which makes them difficult to read using standard \R functions.
 }
 \examples{
-\donttest{
-# Not tested automatically as requires a file
+\dontrun{
+# Don't run these examples as use of the dummy
+# files will cause error messages
+
 Stoon_monthly_precip <- ch_read_AHCCD_monthly("mt4057120.txt")
 NB_monthly_tmean <- ch_read_AHCCD_monthly("mm4045695.txt") }
 }
@@ -30,7 +32,7 @@ the second generation adjusted daily temperature and precipitation dataset for t
 Atmosphere-Ocean, 49 (2), 163-177.}
 }
 \seealso{
-\code{\link{ch_read_AHCCD_daily}} \code{\link{ch_get_AHCCD_monthly}}
+\code{\link{ch_read_AHCCD_daily}}
 }
 \author{
 Kevin Shook

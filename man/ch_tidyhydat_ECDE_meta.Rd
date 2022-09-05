@@ -59,17 +59,25 @@ of many fields such as operating schedule. Returning these values slows the func
 particularly when all WSC stations are selected.
 }
 \examples{
-\donttest{
-# This example requires \pkg{tidyhydat} to be installed
-# the \code{HYDAT} database, which makes automatic checking slow
-stations <- c("05BB001", "05BB003", "05BB004", "05BB005")
-result <- ch_tidyhydat_ECDE_meta(stations)
-metadata <- result[[1]]
-version <- result[[2]]
+# This example uses the built-in test database, by setting the hydat_path parameter
+# You will want to use it with your actual HYDAT database
+library(tidyhydat)
+# check for existence of test database
+test_db <- hy_test_db()
+if (file.exists(test_db)) {
+  stations <- c("05AA008", "08MF005", "05HD008")
+  hy_set_default_db(test_db)
+  result <- ch_tidyhydat_ECDE_meta(stations)
+  metadata <- result[[1]]
+  version <- result[[2]]
+  hy_set_default_db(NULL)    # Reset HYDAT database
 }
-\donttest{
-# This example is not run, as it can take over an hour to execute
-# It is intended to be used by the package maintainers to update \code{HYDAT_list}
+\dontrun{
+# This example is not run, as it will take several hours to execute and will
+# return many warnings for stations having no data. Note that it is using the actual
+# HYDAT database, which must have been installed previously
+# This use of the function is intended for the package maintainers to 
+# update the HYDAT_list data frame
 result <- ch_tidyhydat_ECDE_meta("all", TRUE)
 HYDAT_list <- result$meta
 }
