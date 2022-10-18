@@ -1,4 +1,4 @@
-ecaae57a4eba28e57f0801ccecef64dd *DESCRIPTION
+0b79a522e9dd35728d559574c093a741 *DESCRIPTION
 582a62b12f083a15094e6d8b5b460a19 *NAMESPACE
 099fb21def0842254b890dd384cc0b36 *NEWS.md
 7c9b1be34edb4a95577dabaa9bb2f7dd *R/Basic_data_manipulations_functions.R
@@ -67,7 +67,7 @@ b48b3633fa818ab67be4919288c1c867 *data/CAN05AA008.RData
 af901d2c7f49bb24d99f4ef14c0dc1a5 *data/flowAtlantic.rda
 9b8e26bd082fd6de6e97e026d2f8ebfd *inst/doc/hydrograph_plot.R
 c58d67d441d46c0a14f445be3f759468 *inst/doc/hydrograph_plot.Rmd
-f14332705d5b896016e346a362925835 *inst/doc/hydrograph_plot.html
+7190c6b7857fc70d41c2bcf78c020df8 *inst/doc/hydrograph_plot.html
 2f5bafd8cbc56b8eb3260142270c6125 *inst/extdata/04JD005_Daily_Flow_ts.csv
 8bc0e151a501f7ee31e3773b43799486 *inst/extdata/04JD005_h.PNG
 e53371a7d63fce87ee949c7482462845 *man/Basic_data_manipulation_functions.Rd
@@ -135,6 +135,6 @@ b4cf8255df5dc04a9818cedaa73e7ad6 *man/ch_wbt_pourpoints.Rd
 b95e63a639de2c467dc8ef9e03b147ee *tests/testthat/test_ch_fdcurve.R
 2dfa05059172f5533f52601277517e68 *tests/testthat/test_ch_rfa_distseason.R
 5990b980376c9f3d55d47c77f5a0af0a *tests/testthat/test_ch_rfa_extractamax.R
-336b678a03cea4e3c45ad9fd5b5f5ce3 *tests/testthat/test_ch_rfa_seasonstat.R
+9d10ac6d99283645eb3e744c8ec5cff9 *tests/testthat/test_ch_rfa_seasonstat.R
 742505f904a8b8df8501a6cb9d6c5ba0 *tests/testthat/test_ch_wtr_yr.R
 c58d67d441d46c0a14f445be3f759468 *vignettes/hydrograph_plot.Rmd
