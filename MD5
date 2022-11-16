@@ -1,5 +1,5 @@
-0b79a522e9dd35728d559574c093a741 *DESCRIPTION
-582a62b12f083a15094e6d8b5b460a19 *NAMESPACE
+1dfd963da4fc4719a553da17a37824e8 *DESCRIPTION
+13bca15c5950d77dae93bc396f5afe5c *NAMESPACE
 099fb21def0842254b890dd384cc0b36 *NEWS.md
 7c9b1be34edb4a95577dabaa9bb2f7dd *R/Basic_data_manipulations_functions.R
 7473d0dee59bb2c935bf373061046d19 *R/CAN05AA008.R
@@ -15,7 +15,10 @@ ded91ba5a97e59faf582d915a4e0e399 *R/ch_booth_plot.R
 d4f6d9f312f2975e6c1338be3f3463ff *R/ch_catchment_hyps.R
 d242ebda157be5949fbd50562ac53cbd *R/ch_checkcatchment.R
 7408d90b1120b983b28ed4700aff8505 *R/ch_checkchannels.R
+6c580089dde6a6c15f0efbcecb7a2ea8 *R/ch_circ_mean_reg.R
 d2e413984763e2b52736cb17170f4dd3 *R/ch_clear_wd.R
+52d4ec6292bcd64b5f95e25928d9369e *R/ch_col_gradient.R
+8f232ae1807cb7f1c05f151bfd572740 *R/ch_col_transparent.R
 78d25c30be6fc2d2ba2f8b99db50552b *R/ch_contours.R
 819eaede38fee0aabfd2060146f9c894 *R/ch_create_wd.R
 c6deb512934b117c0566865244588a76 *R/ch_cut_block.R
@@ -31,6 +34,7 @@ ec94b3fb7ad7b953dc8e57e3d24f0268 *R/ch_get_peaks.R
 2feac4eb05953b74475824083cc0590c *R/ch_get_wscstation.R
 2a92d5550e01244f2eb8061683f83680 *R/ch_hydrograph_plot.R
 f791a8e099560e8af09310ca7151ff85 *R/ch_polar_plot.R
+3773f4f946fda77d9f4ab08503d7e9dd *R/ch_polar_plot_peaks.R
 8814815b358c48be60e5c1caf094b24d *R/ch_polar_plot_prep.R
 93c892d616216035683d49fc7b058630 *R/ch_qa_hydrograph.R
 d7e950689232d61fb0fd9e8bac6c3a72 *R/ch_read_AHCCD_daily.R
@@ -42,6 +46,7 @@ d7e950689232d61fb0fd9e8bac6c3a72 *R/ch_read_AHCCD_daily.R
 09a8d96b1f76c09c098bd12ce5ed3fe5 *R/ch_rfa_extractamax.R
 2940b95d93fe8e97a68e087a262854d9 *R/ch_rfa_julianplot.R
 95b58d2057b74911cfdbe9328d7e8bd5 *R/ch_rfa_seasonstat.R
+a16a458de8fa383478c620898858b680 *R/ch_sh_get_amax.R
 ea4763caee9616b8be703e1abb5caefb *R/ch_slice.R
 d70b446fbd2e22b5d1ec2154705608d4 *R/ch_sub_set_Years.R
 d6d9f9f2b9206fc9142ea78a189e3ae8 *R/ch_tidyhydat_ECDE.R
@@ -58,16 +63,16 @@ fe3111e88063a4a9abc8a751820d80c0 *R/ch_wbt_flow_direction.R
 803988c52dcabb1f65468eb9649b3108 *R/ch_wbt_pourpoints.R
 e1ea9d88db03a521bcf1a6a2b0cca24a *R/ch_wbt_removesinks.R
 d89c58b3ae95159aed0d0d0feacfde0f *R/ch_wtr_yr.R
-18e8e2b464edabc44c0b7ad397cbeb9b *R/utils.R
+e83a355945fa7d850716b8ba3887721a *R/utils.R
 cde2223545127085a7e41e92a4030010 *README.md
-69ebbd52762bf4448a4f0dab30b88355 *build/vignette.rds
+cc491fa2ef7a5b6ed653d04bc68b03a0 *build/vignette.rds
 311b15052559dd69de6c9248f42aeec0 *data/CAN01AD002.RData
 b48b3633fa818ab67be4919288c1c867 *data/CAN05AA008.RData
 64af145cdd1018a520e5e869b05b2772 *data/HYDAT_list.RData
 af901d2c7f49bb24d99f4ef14c0dc1a5 *data/flowAtlantic.rda
 9b8e26bd082fd6de6e97e026d2f8ebfd *inst/doc/hydrograph_plot.R
 c58d67d441d46c0a14f445be3f759468 *inst/doc/hydrograph_plot.Rmd
-7190c6b7857fc70d41c2bcf78c020df8 *inst/doc/hydrograph_plot.html
+c3ebc341b613fab41ac0e5d8431b7ff4 *inst/doc/hydrograph_plot.html
 2f5bafd8cbc56b8eb3260142270c6125 *inst/extdata/04JD005_Daily_Flow_ts.csv
 8bc0e151a501f7ee31e3773b43799486 *inst/extdata/04JD005_h.PNG
 e53371a7d63fce87ee949c7482462845 *man/Basic_data_manipulation_functions.Rd
@@ -84,8 +89,10 @@ d6f8d8c1cf9b39ee97826799feb78783 *man/ch_booth_plot.Rd
 9276f12677c728ff5004d8d066b92797 *man/ch_catchment_hyps.Rd
 e1ad563ec3c1595d744a45dd2b1c166d *man/ch_checkcatchment.Rd
 60c59fddd0293e71811a8fe0c3b0f91e *man/ch_checkchannels.Rd
+5f679034bbb41cc06e12bbf6f3a4fb0a *man/ch_circ_mean_reg.Rd
 9f0aa7ad343566575528e389c22dd14d *man/ch_clear_wd.Rd
-0ccd451d0ce492869a5854af9707e0aa *man/ch_col_transparent.Rd
+700ab523e5978e9bbddf6324ad4c6061 *man/ch_col_gradient.Rd
+a85bc0971102d4b74c3d000e2f92c927 *man/ch_col_transparent.Rd
 0316c0ac6bbf8082e06264db694ade45 *man/ch_contours.Rd
 915f249e971e1ac69859d8aa6ad30f84 *man/ch_create_wd.Rd
 15fd6cbfa1588e26d9d4c155bb0403b4 *man/ch_cut_block.Rd
@@ -102,6 +109,7 @@ bc7eba615b14a2592f4f1e031ace2045 *man/ch_get_peaks.Rd
 feffca3d4818ed85d91f680d05938563 *man/ch_get_wscstation.Rd
 4e154db1a8c319662aacd456abc9f7fc *man/ch_hydrograph_plot.Rd
 43e1ea5808dfab449daa98f35ea91d4e *man/ch_polar_plot.Rd
+c2a617c0bbded3281c6e900a8872ead3 *man/ch_polar_plot_peaks.Rd
 2b1d14050bbfc46fa6fdf156c4ac254c *man/ch_polar_plot_prep.Rd
 4f05cfd2efef7789a801432b121c86d7 *man/ch_qa_hydrograph.Rd
 d33a24a7c26d330046be02c164ef4153 *man/ch_read_AHCCD_daily.Rd
@@ -112,6 +120,7 @@ f3b81aac45e6159dd2a9a128ccf57a1d *man/ch_regime_plot.Rd
 c9f7015202b036d66ca082ad41f32b2c *man/ch_rfa_extractamax.Rd
 d16f2cfddee37d49a86d2a5565dcab2f *man/ch_rfa_julianplot.Rd
 02cc317de2d01e4e1e799efdce3e77d4 *man/ch_rfa_seasonstat.Rd
+22169e32d3d0583ee325b63237d9c035 *man/ch_sh_get_amax.Rd
 5be3b725723bb69da8f51f65ea9974cf *man/ch_slice.Rd
 f946a9166dd26e38c71dd593fc6e1ec5 *man/ch_stack_EC.Rd
 fecf06ee21c6b7ed15245d9486fb0b24 *man/ch_sub_set_Years.Rd
