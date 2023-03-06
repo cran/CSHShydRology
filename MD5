@@ -1,5 +1,5 @@
-1dfd963da4fc4719a553da17a37824e8 *DESCRIPTION
-13bca15c5950d77dae93bc396f5afe5c *NAMESPACE
+5c272ac3da2e55f6b33c4a95221c28cd *DESCRIPTION
+26dafa714038be7eb4bece35b01dda4c *NAMESPACE
 099fb21def0842254b890dd384cc0b36 *NEWS.md
 7c9b1be34edb4a95577dabaa9bb2f7dd *R/Basic_data_manipulations_functions.R
 7473d0dee59bb2c935bf373061046d19 *R/CAN05AA008.R
@@ -19,6 +19,7 @@ d242ebda157be5949fbd50562ac53cbd *R/ch_checkcatchment.R
 d2e413984763e2b52736cb17170f4dd3 *R/ch_clear_wd.R
 52d4ec6292bcd64b5f95e25928d9369e *R/ch_col_gradient.R
 8f232ae1807cb7f1c05f151bfd572740 *R/ch_col_transparent.R
+6f107064e7f081dc5f9a26af29bfc7a0 *R/ch_color_gradient.R
 78d25c30be6fc2d2ba2f8b99db50552b *R/ch_contours.R
 819eaede38fee0aabfd2060146f9c894 *R/ch_create_wd.R
 c6deb512934b117c0566865244588a76 *R/ch_cut_block.R
@@ -29,10 +30,12 @@ e1eb4e2a6ef27e3653487be6c11a149c *R/ch_flow_raster.R
 b4785b69551c1ac2c16fa6b92737ceff *R/ch_flow_raster_qa.R
 ae7e36d7ca458b571bd96a7c12b30f7b *R/ch_flow_raster_trend.R
 cd9212b6c8e46f259d05e62a12ed1aec *R/ch_get_ECDE_metadata.R
+9a663aecbf45f60c10ed8748e68f4b77 *R/ch_get_map_base.R
 ec94b3fb7ad7b953dc8e57e3d24f0268 *R/ch_get_peaks.R
 291e79c7047383e2b16ba8eb0b83c492 *R/ch_get_url_data.R
 2feac4eb05953b74475824083cc0590c *R/ch_get_wscstation.R
 2a92d5550e01244f2eb8061683f83680 *R/ch_hydrograph_plot.R
+1673cc36df0704f8be5e733b9b5ff0b0 *R/ch_map_plot_data.R
 f791a8e099560e8af09310ca7151ff85 *R/ch_polar_plot.R
 3773f4f946fda77d9f4ab08503d7e9dd *R/ch_polar_plot_peaks.R
 8814815b358c48be60e5c1caf094b24d *R/ch_polar_plot_prep.R
@@ -51,6 +54,8 @@ ea4763caee9616b8be703e1abb5caefb *R/ch_slice.R
 d70b446fbd2e22b5d1ec2154705608d4 *R/ch_sub_set_Years.R
 d6d9f9f2b9206fc9142ea78a189e3ae8 *R/ch_tidyhydat_ECDE.R
 a048a763896b7a72ba93ed5314661d19 *R/ch_tidyhydat_ECDE_meta.R
+bb35d86a0408d7bbc41e78c1331d1218 *R/ch_tr_sign.R
+102dbf09e6cf1a32198a04644597f120 *R/ch_tr_signif.R
 01e78d87f9c05e453f58b296b66bab39 *R/ch_volcano_pourpoints.R
 1d0fba6def7028a2b1ed17d2ca5a9d37 *R/ch_volcano_raster.R
 f74d3e39f5211855d068e3b2ad56d258 *R/ch_wbt_catchment.R
@@ -72,7 +77,7 @@ b48b3633fa818ab67be4919288c1c867 *data/CAN05AA008.RData
 af901d2c7f49bb24d99f4ef14c0dc1a5 *data/flowAtlantic.rda
 9b8e26bd082fd6de6e97e026d2f8ebfd *inst/doc/hydrograph_plot.R
 c58d67d441d46c0a14f445be3f759468 *inst/doc/hydrograph_plot.Rmd
-c3ebc341b613fab41ac0e5d8431b7ff4 *inst/doc/hydrograph_plot.html
+07239829391382a8934bfd405f4866d9 *inst/doc/hydrograph_plot.html
 2f5bafd8cbc56b8eb3260142270c6125 *inst/extdata/04JD005_Daily_Flow_ts.csv
 8bc0e151a501f7ee31e3773b43799486 *inst/extdata/04JD005_h.PNG
 e53371a7d63fce87ee949c7482462845 *man/Basic_data_manipulation_functions.Rd
@@ -93,6 +98,7 @@ e1ad563ec3c1595d744a45dd2b1c166d *man/ch_checkcatchment.Rd
 9f0aa7ad343566575528e389c22dd14d *man/ch_clear_wd.Rd
 700ab523e5978e9bbddf6324ad4c6061 *man/ch_col_gradient.Rd
 a85bc0971102d4b74c3d000e2f92c927 *man/ch_col_transparent.Rd
+5233865bd5b1f60401078936f0024c81 *man/ch_color_gradient.Rd
 0316c0ac6bbf8082e06264db694ade45 *man/ch_contours.Rd
 915f249e971e1ac69859d8aa6ad30f84 *man/ch_create_wd.Rd
 15fd6cbfa1588e26d9d4c155bb0403b4 *man/ch_cut_block.Rd
@@ -104,10 +110,12 @@ a03bfd45655c7c432042560b48fc7bd0 *man/ch_flow_raster.Rd
 e030828b8327fa9b3f924b3cc38fbae3 *man/ch_flow_raster_qa.Rd
 803945e33ba11568b02d3b2470ef0cec *man/ch_flow_raster_trend.Rd
 fe0442fa6db2f06ca4479e9131ebb265 *man/ch_get_ECDE_metadata.Rd
+b7aa5b76d1a8892501a737612c8b7fcc *man/ch_get_map_base.Rd
 bc7eba615b14a2592f4f1e031ace2045 *man/ch_get_peaks.Rd
 13ff7cbaf88c8a289d46d2b354bce5b1 *man/ch_get_url_data.Rd
 feffca3d4818ed85d91f680d05938563 *man/ch_get_wscstation.Rd
 4e154db1a8c319662aacd456abc9f7fc *man/ch_hydrograph_plot.Rd
+84fedcc9cfe765300d70ca923f24207f *man/ch_map_plot_data.Rd
 43e1ea5808dfab449daa98f35ea91d4e *man/ch_polar_plot.Rd
 c2a617c0bbded3281c6e900a8872ead3 *man/ch_polar_plot_peaks.Rd
 2b1d14050bbfc46fa6fdf156c4ac254c *man/ch_polar_plot_prep.Rd
@@ -127,6 +135,8 @@ fecf06ee21c6b7ed15245d9486fb0b24 *man/ch_sub_set_Years.Rd
 db014f46fc98a62f310e5bc990412f19 *man/ch_test_url_file.Rd
 e182b1981af60ed86740ecea9ceb1a61 *man/ch_tidyhydat_ECDE.Rd
 79671d270b02ce26ade9bb6a3cacb3a8 *man/ch_tidyhydat_ECDE_meta.Rd
+e8167804f1e727df6e057e43f06e1d0a *man/ch_tr_sign.Rd
+13a14c403f8b0dfd095abb7bb08d03d3 *man/ch_tr_signif.Rd
 a8ee9e0343980526ad245f39846f442c *man/ch_volcano_pourpoints.Rd
 d83a5020205f0225acb423bb973bf3a1 *man/ch_volcano_raster.Rd
 3103175a88c03c3390fd2c85f3451c42 *man/ch_wbt_catchment.Rd
@@ -143,7 +153,7 @@ b4cf8255df5dc04a9818cedaa73e7ad6 *man/ch_wbt_pourpoints.Rd
 8b5e6bf1f5cdcf5c91d4f37e4790489d *tests/testthat.R
 b95e63a639de2c467dc8ef9e03b147ee *tests/testthat/test_ch_fdcurve.R
 2dfa05059172f5533f52601277517e68 *tests/testthat/test_ch_rfa_distseason.R
-5990b980376c9f3d55d47c77f5a0af0a *tests/testthat/test_ch_rfa_extractamax.R
+ff113f7ff9d65cabcd2a5316288cb390 *tests/testthat/test_ch_rfa_extractamax.R
 9d10ac6d99283645eb3e744c8ec5cff9 *tests/testthat/test_ch_rfa_seasonstat.R
 742505f904a8b8df8501a6cb9d6c5ba0 *tests/testthat/test_ch_wtr_yr.R
 c58d67d441d46c0a14f445be3f759468 *vignettes/hydrograph_plot.Rmd
