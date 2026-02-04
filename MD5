@@ -1,6 +1,6 @@
-3e6aa2cd36c15fc5f0fa00819059854f *DESCRIPTION
-a77858c595d4da5a1c0b4b40028f1808 *NAMESPACE
-c113a9359b2e97d498cf4a6882d549cd *NEWS.md
+7baeca3bbeeb9649cbf7af99debf4270 *DESCRIPTION
+1c3dd58af6c1ff12740c4170986c1490 *NAMESPACE
+b53854c81d3e3ba71ffab176f4314a99 *NEWS.md
 7c9b1be34edb4a95577dabaa9bb2f7dd *R/Basic_data_manipulations_functions.R
 7473d0dee59bb2c935bf373061046d19 *R/CAN05AA008.R
 f8614044ae5ce88d9d7e17ebf089ffe5 *R/CSHShydRology-package.R
@@ -12,7 +12,7 @@ ef7885dc112b77acdc57f0b104119fc8 *R/Visualization_functions.R
 628e15077b7e902904a161c4d01f1a09 *R/ch_axis_doy.R
 20e618f5a2da8c84e1b6fa39f09635ef *R/ch_binned_MannWhitney.R
 ded91ba5a97e59faf582d915a4e0e399 *R/ch_booth_plot.R
-d4f6d9f312f2975e6c1338be3f3463ff *R/ch_catchment_hyps.R
+df13a6f72045e8b8a9db50bd62c2255a *R/ch_catchment_hyps.R
 d242ebda157be5949fbd50562ac53cbd *R/ch_checkcatchment.R
 7408d90b1120b983b28ed4700aff8505 *R/ch_checkchannels.R
 6c580089dde6a6c15f0efbcecb7a2ea8 *R/ch_circ_mean_reg.R
@@ -30,9 +30,10 @@ c6deb512934b117c0566865244588a76 *R/ch_cut_block.R
 841953b47830d3efad7bd11a803c766a *R/ch_ffa_screen_plot.R
 50b71ca92cf04333f072110d873e3f00 *R/ch_flow_raster.R
 fdd1ff7ca88c575f63d534b06718f3dc *R/ch_flow_raster_qa.R
+968623ade490d244793e6fae096df279 *R/ch_flow_raster_trend.R
 0f6f4f810e600d52dd14b51d0ff113ce *R/ch_get_ECDE_metadata.R
 ec94b3fb7ad7b953dc8e57e3d24f0268 *R/ch_get_peaks.R
-291e79c7047383e2b16ba8eb0b83c492 *R/ch_get_url_data.R
+3294e98631f12bfb202871c84f391793 *R/ch_get_url_data.R
 2feac4eb05953b74475824083cc0590c *R/ch_get_wscstation.R
 b80e35c6dd412ca4a954957a272422ab *R/ch_gg_hydrographs.R
 e9eeb1db94a79fe3e9f79ab390445eaa *R/ch_high_Grubbs_test.R
@@ -69,7 +70,7 @@ fe3111e88063a4a9abc8a751820d80c0 *R/ch_wbt_flow_direction.R
 f7ecdb6a4d49e82890f666cb49c0ee7a *R/ch_wbt_pourpoints.R
 e1ea9d88db03a521bcf1a6a2b0cca24a *R/ch_wbt_removesinks.R
 d89c58b3ae95159aed0d0d0feacfde0f *R/ch_wtr_yr.R
-d96456fc77607ba37507d3c9581e7df1 *R/utils.R
+cb38604fbc5ffb1ab95b28f427ce362b *R/utils.R
 3c99036e22a6f1603cbb676c1701c224 *README.md
 85cb836c34d4a933a7063a91a24ba4b9 *build/vignette.rds
 311b15052559dd69de6c9248f42aeec0 *data/CAN01AD002.RData
@@ -78,13 +79,13 @@ b48b3633fa818ab67be4919288c1c867 *data/CAN05AA008.RData
 af901d2c7f49bb24d99f4ef14c0dc1a5 *data/flowAtlantic.rda
 b5dcb892f84b07373d74a9730d7d8ccf *inst/doc/ch_model_hydrograph.R
 f1dccacc4bcd6e2b7a9080edb7c5c627 *inst/doc/ch_model_hydrograph.Rmd
-fd4c4385467d810589ed5a7d9c5edda0 *inst/doc/ch_model_hydrograph.html
+7468c210398348a1e1752a80bce156e3 *inst/doc/ch_model_hydrograph.html
 2f5bafd8cbc56b8eb3260142270c6125 *inst/extdata/04JD005_Daily_Flow_ts.csv
 8bc0e151a501f7ee31e3773b43799486 *inst/extdata/04JD005_h.PNG
 e53371a7d63fce87ee949c7482462845 *man/Basic_data_manipulation_functions.Rd
 3d35da71ce614fa3b0e13d1a959b711b *man/CAN01AD002.Rd
 f92efaa80383869aba85f2671fea9713 *man/CAN05AA008.Rd
-2ce1b60a01884ed36a625dcc9a56ea8c *man/CSHShydRology-package.Rd
+cf2b1841fa916ea0f589e380d4d8503c *man/CSHShydRology-package.Rd
 3fb87c026c79e7268580af27694b7985 *man/HYDAT_list.Rd
 646302f9cee185b3a5b41f3fb1ce8ac3 *man/Spatial_hydrology_functions.Rd
 b9b921a49159036a5056e41b3af7a7d6 *man/StatisticalHydrology-functions.Rd
@@ -92,7 +93,7 @@ b9b921a49159036a5056e41b3af7a7d6 *man/StatisticalHydrology-functions.Rd
 7ff7101faeb418c069753b666e5f3481 *man/ch_axis_doy.Rd
 c60f26ae494558e56fe0e02a5f98c919 *man/ch_binned_MannWhitney.Rd
 d6f8d8c1cf9b39ee97826799feb78783 *man/ch_booth_plot.Rd
-9276f12677c728ff5004d8d066b92797 *man/ch_catchment_hyps.Rd
+5cfcd79c579709a862c0a35680071b4b *man/ch_catchment_hyps.Rd
 e1ad563ec3c1595d744a45dd2b1c166d *man/ch_checkcatchment.Rd
 60c59fddd0293e71811a8fe0c3b0f91e *man/ch_checkchannels.Rd
 5f679034bbb41cc06e12bbf6f3a4fb0a *man/ch_circ_mean_reg.Rd
@@ -111,9 +112,10 @@ cb567dce68a0217a34384a3ac27b8539 *man/ch_fdcurve.Rd
 94bcbdd818bdf83ccb2a59f7e7796629 *man/ch_ffa_screen_plot.Rd
 27bbd6086e897c40cec75b9187a089fe *man/ch_flow_raster.Rd
 f15105cfe1e9efeab7da8ed8257ad395 *man/ch_flow_raster_qa.Rd
+803945e33ba11568b02d3b2470ef0cec *man/ch_flow_raster_trend.Rd
 fe0442fa6db2f06ca4479e9131ebb265 *man/ch_get_ECDE_metadata.Rd
 bc7eba615b14a2592f4f1e031ace2045 *man/ch_get_peaks.Rd
-13ff7cbaf88c8a289d46d2b354bce5b1 *man/ch_get_url_data.Rd
+95abe87650f1e9100d5862adc0a7ef12 *man/ch_get_url_data.Rd
 feffca3d4818ed85d91f680d05938563 *man/ch_get_wscstation.Rd
 bf2912efefc0bf7e25bbab4265862863 *man/ch_gg_hydrographs.Rd
 57c9aaae54d026e87ca3de315f070556 *man/ch_high_Grubbs_test.Rd
@@ -130,6 +132,7 @@ f3b81aac45e6159dd2a9a128ccf57a1d *man/ch_regime_plot.Rd
 c9f7015202b036d66ca082ad41f32b2c *man/ch_rfa_extractamax.Rd
 d16f2cfddee37d49a86d2a5565dcab2f *man/ch_rfa_julianplot.Rd
 02cc317de2d01e4e1e799efdce3e77d4 *man/ch_rfa_seasonstat.Rd
+a950c48d1b4cfdc0c4dcb72a9e5940bd *man/ch_safe_GET.Rd
 22169e32d3d0583ee325b63237d9c035 *man/ch_sh_get_amax.Rd
 7cdff31a3002c07d196bfe37550b5e9b *man/ch_slice.Rd
 f946a9166dd26e38c71dd593fc6e1ec5 *man/ch_stack_EC.Rd
